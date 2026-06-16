@@ -41,20 +41,25 @@ body {
 /* Campo abaixo para adicionar links */
 .links-box {
     display: flex;
-    gap: 20px; /* Espaço horizontal entre um link e outro */
+    gap: 15px; /* Espaço horizontal entre os botões */
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .links-box a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;          /* Tipografia branca */
+    background-color: #000000; /* Fundo preto */
     font-weight: 500;
-    text-transform: lowercase; /* Links em letras minúsculas estilo Strobeck */
+    text-transform: lowercase; /* Letras minúsculas estilo Strobeck */
     letter-spacing: 0.5px;
-    transition: opacity 0.2s;
+    padding: 8px 16px;       /* Espaçamento interno para criar o formato do botão */
+    border: 2px solid #000000; /* Borda preta para manter o tamanho fixo na inversão */
+    transition: background-color 0.2s, color 0.2s; /* Transição suave */
 }
 
-.links-box a:hover {
-    opacity: 0.6; /* Dá um efeito sutil ao passar o mouse */
+/* Efeito ao passar o mouse (Hover) e ao Clicar/Manter pressionado (Active) */
+.links-box a:hover, .links-box a:active {
+    background-color: transparent; /* O fundo preto some, revelando o ciano do site */
+    color: #000000;               /* A tipografia fica preta */
 }
