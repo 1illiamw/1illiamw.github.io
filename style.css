@@ -53,7 +53,7 @@ body {
     font-weight: 500;
     text-transform: lowercase; /* Letras minúsculas estilo Strobeck */
     letter-spacing: 0.5px;
-    padding: 8px 16px;       /* Espaçamento interno para criar o formato do botão */
+    padding: 4px 10px;       /* Espaçamento interno para criar o formato do botão */
     border: 2px solid #000000; /* Borda preta para manter o tamanho fixo na inversão */
     transition: background-color 0.2s, color 0.2s; /* Transição suave */
 }
