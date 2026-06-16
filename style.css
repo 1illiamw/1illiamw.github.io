@@ -1,4 +1,3 @@
-CSS
 * {
     margin: 0;
     padding: 0;
@@ -7,91 +6,55 @@ CSS
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #00ffff; /* Cor de fundo ciano pedida */
     color: #000000;
     font-size: 14px;
-}
-
-.container {
-    display: flex;
-    min-height: 100vh;
-}
-
-/* Coluna da Esquerda */
-.sidebar {
-    width: 250px;
-    padding: 40px;
-    position: fixed;
-    height: 100vh;
-    border-right: 1px solid #f0f0f0;
-}
-
-.sidebar h1 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.sidebar .subtitle {
-    color: #888;
-    margin-bottom: 40px;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar ul li {
-    margin-bottom: 12px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #666;
-    transition: color 0.2s;
-}
-
-.sidebar ul li a:hover, .sidebar ul li a.active {
-    color: #000000;
-    font-weight: 500;
-}
-
-/* Coluna da Direita */
-.content {
-    margin-left: 250px;
-    padding: 40px;
-    flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.main-media {
+.wrapper {
+    max-width: 900px; /* Largura máxima da foto */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Box para incorporar a foto */
+.media-box {
+    width: 100%;
+    margin-bottom: 25px; /* Espaço entre a foto e os links */
+    display: flex;
+    justify-content: center;
+}
+
+.main-photo {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Responsivo para Celular */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar {
-        width: 100%;
-        position: relative;
-        height: auto;
-        padding: 20px;
-        border-right: none;
-        border-bottom: 1px solid #f0f0f0;
-    }
-    .sidebar .subtitle {
-        margin-bottom: 20px;
-    }
-    .content {
-        margin-left: 0;
-        padding: 20px;
-    }
+/* Campo abaixo para adicionar links */
+.links-box {
+    display: flex;
+    gap: 20px; /* Espaço horizontal entre um link e outro */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links-box a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    text-transform: lowercase; /* Links em letras minúsculas estilo Strobeck */
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s;
+}
+
+.links-box a:hover {
+    opacity: 0.6; /* Dá um efeito sutil ao passar o mouse */
 }
