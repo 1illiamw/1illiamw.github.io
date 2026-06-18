@@ -46,31 +46,27 @@ body {
     flex-wrap: wrap;
 }
 
-.links-box a {
-    text-decoration: none;
-    color: #ffffff;          /* Tipografia branca */
-    background-color: #000000; /* Fundo preto */
-    font-weight: 500;
-    text-transform: lowercase; /* Letras minúsculas */
-    letter-spacing: 0.5px;
-    padding: 6px 14px;       /* Aumentado levemente para compensar o corte das bordas */
-    transition: background-color 0.2s, color 0.2s; /* Transição suave */
-    
-    /* Efeito de papel cortado à mão (recorte irregular nos 4 cantos e lados) */
-    clip-path: polygon(
-        2px 4px,   /* Canto superior esquerdo */
-        98% 2px,   /* Borda superior deslizando para a direita */
-        99% 4px,   /* Canto superior direito */
-        100% 92%,  /* Borda direita descendo */
-        97% 98%,   /* Canto inferior direito */
-        4px 96%,   /* Borda inferior correndo para a esquerda */
-        1px 94%,   /* Canto inferior esquerdo */
-        0% 8%      /* Borda esquerda subindo */
-    );
+/* Campo abaixo para adicionar links */
+.links-box {
+    display: flex;
+    gap: 25px; /* Aumentado um pouco o espaço já que não há mais boxes */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-/* Mantemos a inversão de cores idêntica ao passar o mouse */
+.links-box a {
+    text-decoration: none;
+    color: #000000;            /* Texto totalmente preto */
+    font-weight: 500;
+    text-transform: lowercase; /* Letras minúsculas estilo Strobeck */
+    letter-spacing: 0.5px;
+    padding: 0;                /* Remove os preenchimentos do antigo botão */
+    background: none;          /* Garante que não há fundo */
+    transition: color 0.2s;
+}
+
+/* Efeito ao passar o mouse (Hover) e ao Clicar (Active) */
 .links-box a:hover, .links-box a:active {
-    background-color: transparent; 
-    color: #000000;               
+    text-decoration: line-through; /* Cria o risco horizontal exatamente no meio do texto */
+    color: #000000;                /* Mantém a cor preta ao riscar */
 }
