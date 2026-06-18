@@ -51,15 +51,26 @@ body {
     color: #ffffff;          /* Tipografia branca */
     background-color: #000000; /* Fundo preto */
     font-weight: 500;
-    text-transform: lowercase; /* Letras minúsculas estilo Strobeck */
+    text-transform: lowercase; /* Letras minúsculas */
     letter-spacing: 0.5px;
-    padding: 4px 10px;       /* Espaçamento interno para criar o formato do botão */
-    border: 2px solid #000000; /* Borda preta para manter o tamanho fixo na inversão */
+    padding: 6px 14px;       /* Aumentado levemente para compensar o corte das bordas */
     transition: background-color 0.2s, color 0.2s; /* Transição suave */
+    
+    /* Efeito de papel cortado à mão (recorte irregular nos 4 cantos e lados) */
+    clip-path: polygon(
+        2px 4px,   /* Canto superior esquerdo */
+        98% 2px,   /* Borda superior deslizando para a direita */
+        99% 4px,   /* Canto superior direito */
+        100% 92%,  /* Borda direita descendo */
+        97% 98%,   /* Canto inferior direito */
+        4px 96%,   /* Borda inferior correndo para a esquerda */
+        1px 94%,   /* Canto inferior esquerdo */
+        0% 8%      /* Borda esquerda subindo */
+    );
 }
 
-/* Efeito ao passar o mouse (Hover) e ao Clicar/Manter pressionado (Active) */
+/* Mantemos a inversão de cores idêntica ao passar o mouse */
 .links-box a:hover, .links-box a:active {
-    background-color: transparent; /* O fundo preto some, revelando o ciano do site */
-    color: #000000;               /* A tipografia fica preta */
+    background-color: transparent; 
+    color: #000000;               
 }
