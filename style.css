@@ -48,18 +48,20 @@ body {
 
 .links-box a {
     text-decoration: none;
-    color: #000000;            /* Letra preta */
-    background-color: #ffffff; /* Fundo branco do box */
+    color: #000000;            /* Letra preta no estado normal */
+    background-color: #ffffff; /* Fundo branco do box no estado normal */
     font-weight: 500;
     text-transform: lowercase; /* Letras minúsculas estilo Strobeck */
     letter-spacing: 0.5px;
     padding: 4px 10px;         /* Margem sutil: bem fina em cima/baixo e justa nas laterais */
-    border-radius: 0;          /* Mantém as quinas retas e minimalistas */
-    transition: opacity 0.2s;  /* Transição suave de opacidade */
+    border: 1px solid #ffffff; /* Borda branca invisível para evitar que o box mude de tamanho ao inverter */
+    transition: background-color 0.2s, color 0.2s; /* Transição suave na troca de cores */
 }
 
-/* Comportamento ao passar o mouse e ao clicar (sem traçado) */
+/* Inversão total ao passar o mouse (Hover) e ao clicar (Active) */
 .links-box a:hover, .links-box a:active {
-    text-decoration: none;     /* Garante que nenhum traçado ou sublinhado apareça */
-    opacity: 0.7;              /* O box fica levemente transparente, dando o feedback do clique */
+    text-decoration: none;
+    background-color: #000000; /* O box fica preto */
+    color: #ffffff;            /* A fonte fica branca */
+    border-color: #000000;     /* A borda acompanha o preto */
 }
