@@ -41,32 +41,25 @@ body {
 /* Campo abaixo para adicionar links */
 .links-box {
     display: flex;
-    gap: 15px; /* Espaço horizontal entre os botões */
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Campo abaixo para adicionar links */
-.links-box {
-    display: flex;
-    gap: 25px; /* Aumentado um pouco o espaço já que não há mais boxes */
+    gap: 12px; /* Espaço sutil entre um box e outro */
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .links-box a {
     text-decoration: none;
-    color: #000000;            /* Texto totalmente preto */
+    color: #000000;            /* Letra preta */
+    background-color: #ffffff; /* Fundo branco do box */
     font-weight: 500;
     text-transform: lowercase; /* Letras minúsculas estilo Strobeck */
     letter-spacing: 0.5px;
-    padding: 0;                /* Remove os preenchimentos do antigo botão */
-    background: none;          /* Garante que não há fundo */
-    transition: color 0.2s;
+    padding: 4px 10px;         /* Margem sutil: bem fina em cima/baixo e justa nas laterais */
+    border-radius: 0;          /* Mantém as quinas retas e minimalistas */
+    transition: opacity 0.2s;  /* Transição suave de opacidade */
 }
 
-/* Efeito ao passar o mouse (Hover) e ao Clicar (Active) */
+/* Comportamento ao passar o mouse e ao clicar (sem traçado) */
 .links-box a:hover, .links-box a:active {
-    text-decoration: line-through; /* Cria o risco horizontal exatamente no meio do texto */
-    color: #000000;                /* Mantém a cor preta ao riscar */
+    text-decoration: none;     /* Garante que nenhum traçado ou sublinhado apareça */
+    opacity: 0.7;              /* O box fica levemente transparente, dando o feedback do clique */
 }
