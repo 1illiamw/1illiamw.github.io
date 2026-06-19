@@ -53,7 +53,7 @@ body {
     font-weight: 500;
     text-transform: lowercase; /* Letras minúsculas estilo Strobeck */
     letter-spacing: 0.5px;
-    padding: 4px 10px;         /* Margem sutil: bem fina em cima/baixo e justa nas laterais */
+    padding: 2px 8px;         /* Margem sutil: bem fina em cima/baixo e justa nas laterais */
     border: 1px solid #ffffff; /* Borda branca invisível para evitar que o box mude de tamanho ao inverter */
     transition: background-color 0.2s, color 0.2s; /* Transição suave na troca de cores */
 }
