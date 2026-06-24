@@ -14,16 +14,14 @@ body {
     min-height: 100vh;
     padding: 20px;
 
-    /* Configuração do Degradê com as cores do Color Bars */
+    /* Configuração do Degradê: Laranja Ferrugem, Lilás e Roxo */
     background: linear-gradient(135deg, 
-        #ffffff, /* Branco */
-        #f1c40f, /* Amarelo */
-        #00ffff, /* Ciano */
-        #2ecc71, /* Verde */
-        #9b59b6, /* Magenta */
-        #e74c3c, /* Vermelho */
-        #3498db, /* Azul */
-        #ffffff  /* Fecha em branco para ciclo infinito suave */
+        #d35400, /* Laranja Ferrugem Escuro */
+        #e67e22, /* Laranja Ferrugem Claro */
+        #b47bee, /* Lilás */
+        #8e44ad, /* Roxo */
+        #6c3483, /* Roxo Escuro */
+        #d35400  /* Fecha no laranja para ciclo infinito suave */
     );
     
     /* Expande o fundo para permitir o movimento */
@@ -77,20 +75,20 @@ body {
 
 .links-box a {
     text-decoration: none;
-    color: #000000;            /* Letra preta no estado normal */
-    background-color: #ffffff; /* Fundo branco no estado normal */
+    color: #ffffff;            /* Letra branca no estado normal */
+    background-color: #000000; /* Fundo preto no estado normal */
     font-weight: 500;
     text-transform: lowercase; /* Força letras minúsculas */
     letter-spacing: 0.5px;
     padding: 4px 10px;         /* Margem fina e justa em volta do texto */
-    border: 1px solid #ffffff; /* Borda de segurança para evitar tremulação */
+    border: 1px solid #000000; /* Borda de segurança para evitar tremulação */
     transition: background-color 0.2s, color 0.2s; /* Transição suave das cores */
 }
 
-/* Efeito de inversão ao passar o mouse (Hover) e clicar (Active) */
+/* Inversão total ao passar o mouse (Hover) e clicar (Active) */
 .links-box a:hover, .links-box a:active {
     text-decoration: none;
-    background-color: #000000; /* Fundo fica preto */
-    color: #ffffff;            /* Letra fica branca */
-    border-color: #000000;     /* Borda acompanha o preto */
+    background-color: #ffffff; /* Fundo fica branco */
+    color: #000000;            /* Letra fica preta */
+    border-color: #ffffff;     /* Borda acompanha o branco */
 }
