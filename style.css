@@ -80,7 +80,7 @@ body {
     font-weight: 500;
     text-transform: lowercase; /* Força letras minúsculas */
     letter-spacing: 0.5px;
-    padding: 4px 10px;         /* Margem fina e justa em volta do texto */
+    padding: 2px 8px;         /* Margem fina e justa em volta do texto */
     border: 1px solid #ffffff; /* Borda de segurança branca */
     transition: background-color 0.2s, color 0.2s; /* Transição suave das cores */
 }
