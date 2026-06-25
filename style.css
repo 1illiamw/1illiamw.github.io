@@ -78,12 +78,5 @@ body {
 /* Efeito ao passar o mouse (Hover) e clicar (Active) */
 .links-box a:hover, .links-box a:active {
     text-decoration: none;
-    color: #ffffff;            /* A letra muda para branca */
-    
-    /* Cria um contorno preto cirúrgico em volta da letra branca para não sumir no degradê */
-    text-shadow: 
-        -1px -1px 0 #000000,  
-         1px -1px 0 #000000,
-        -1px  1px 0 #000000,
-         1px  1px 0 #000000;
+    color: #000000;           
 }
