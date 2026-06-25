@@ -55,10 +55,10 @@ body {
     display: block;
 }
 
-/* Campo abaixo para adicionar os links (Sem Boxes) */
+/* Campo abaixo para adicionar os links (Puro Minimalismo) */
 .links-box {
     display: flex;
-    gap: 25px; /* Espaço maior entre os textos puros */
+    gap: 25px; /* Espaço elegante entre os textos puros */
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -69,14 +69,15 @@ body {
     font-weight: 500;
     text-transform: lowercase; /* Força letras minúsculas */
     letter-spacing: 0.5px;
-    padding: 0;                /* Remove os preenchimentos do antigo box */
-    background: transparent;   /* Remove o fundo */
-    border: none;              /* Remove as bordas do box */
-    transition: color 0.2s, text-shadow 0.2s; /* Transição suave */
+    padding: 0;                
+    background: transparent;   
+    border: none;              
+    transition: opacity 0.2s;  /* Transição suave de opacidade */
 }
 
-/* Efeito ao passar o mouse (Hover) e clicar (Active) */
+/* Comportamento ao passar o mouse (Hover) e clicar (Active) */
 .links-box a:hover, .links-box a:active {
     text-decoration: none;
-    color: #000000;           
+    color: #000000;            /* Mantém a cor estritamente preta */
+    opacity: 0.6;              /* Suaviza o texto sutilmente para indicar o clique */
 }
