@@ -14,25 +14,25 @@ body {
     min-height: 100vh;
     padding: 20px;
 
-    /* Configuração do Degradê: Do Azul-Noturno aos Tons Terrosos de Laranja */
+    /* Nova Paleta Sóbria: Ciano, Laranja Ferrugem e Lilás Acinzentado */
     background: linear-gradient(135deg, 
-        #0a1128, /* Azul-Noturno Profundo */
-        #1c2541, /* Azul Escuro do Céu */
-        #d35400, /* Laranja Ferrugem / Terracota */
-        #e67e22, /* Laranja Crepúsculo */
-        #1c2541, /* Retorna pelo azul escuro */
-        #0a1128  /* Fecha no azul-noturno para ciclo infinito suave */
+        #00ffff, /* O Ciano original limpo */
+        #b23b00, /* Laranja Ferrugem profundo/terroso */
+        #7a748c, /* Lilás Acinzentado / Ardósia (Neutro e sóbrio) */
+        #d35400, /* Laranja Ferrugem médio */
+        #928da3, /* Variação de Lilás Acinzentado claro */
+        #00ffff  /* Fecha no Ciano para o ciclo infinito sem saltos */
     );
     
     /* Expande o fundo para permitir o movimento */
     background-size: 400% 400%;
     
-    /* Ativa a animação semi-lenta (35 segundos) e infinita */
-    animation: dayNightAnimation 35s ease infinite;
+    /* Mantém a animação fluida e semi-lenta (35 segundos) */
+    animation: soberGradientAnimation 35s ease infinite;
 }
 
-/* Regra que cria o movimento suave do fundo */
-@keyframes dayNightAnimation {
+/* Regra que cria o movimento suave e contínuo do fundo */
+@keyframes soberGradientAnimation {
     0% {
         background-position: 0% 50%;
     }
