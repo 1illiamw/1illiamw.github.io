@@ -82,23 +82,23 @@ body {
     opacity: 0.6;              /* Suaviza o texto sutilmente no clique */
 }
 
-/* Estilização do Player Artesanal de Texto */
+/* Estilização do Player Artesanal de Texto (ID Corrigido) */
 .player-artesanal {
-    margin-top: 20px; /* Dá um respiro abaixo dos links */
+    margin-top: 25px;          /* Mantém o mesmo padrão de respiro */
     display: flex;
     justify-content: center;
 }
 
 #botao-player {
-    font-weight: 500;
-    text-transform: lowercase; /* Mantém o padrão de minúsculas */
-    letter-spacing: 0.5px;
-    color: #000000;
-    cursor: pointer;          /* Transforma a seta do mouse na mãozinha de clique */
-    transition: opacity 0.2s;
-    user-select: none;        /* Evita que o texto fique azul ao clicar várias vezes */
+    color: #000000;            /* Mesma cor dos links */
+    font-weight: 500;          /* Mesma espessura */
+    text-transform: lowercase; /* Mesma padronização minúscula */
+    letter-spacing: 0.5px;     /* Mesmo espaçamento de letras */
+    cursor: pointer;           /* ATIVA A MÃOZINHA DE CLIQUE */
+    transition: opacity 0.2s;  /* Mesma suavidade no hover */
+    user-select: none;         /* Evita que o texto fique azul ao clicar */
 }
 
 #botao-player:hover {
-    opacity: 0.6;             /* Mesma resposta visual elegante dos botões de link */
+    opacity: 0.6;              /* Mesma resposta visual elegante dos links */
 }
