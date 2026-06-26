@@ -3,26 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Alencar</title>
+    <title>wli.am</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+
     <div class="wrapper">
-        <!-- Box da Foto Principal -->
+        
+        <!-- Sua Foto Principal -->
         <div class="media-box">
-            <!-- Substitua o link entre aspas abaixo pela URL da sua foto real depois -->
-            <img src="fotohome_720.png" alt="WLIAM" class="main-photo">
+            <img src="sua-foto.jpg" alt="William Alencar" class="main-photo">
         </div>
         <br>
         <br>
-        <!-- Área de Links Abaixo da Foto -->
+        <!-- Seus Links (Puro Minimalismo) -->
         <div class="links-box">
             <a href="https://wliam.myportfolio.com/" target="_blank">🏝️ trabalhos</a>
             <a href="https://youtube.com/@wliam" target="_blank">🪰 yt</a>
             <a href="mailto:williamalencar@gmail.com">🏓 email</a>
         </div>
+
+        <!-- PLAYER ARTESANAL: Texto puro para controlar o áudio -->
+        <div class="player-artesanal">
+            <!-- Substitua 'nome-do-seu-arquivo.mp3' pelo nome exato do arquivo que você subiu no GitHub -->
+            <audio id="musica-bg" src="quintoandar_aumpassodoparaiso.mp3" loop></audio>
+            <span id="botao-player" onclick="controlarAudio()">🔊 ouvindo hoje</span>
+        </div>
+
     </div>
-    <audio src="quintoandar_aumpassodoparaiso.mp3" autoplay loop></audio>
+
+    <!-- Script para alternar o Play/Pause e o texto do botão -->
+    <script>
+    function controlarAudio() {
+        var audio = document.getElementById("musica-bg");
+        var botao = document.getElementById("botao-player");
+        
+        if (audio.paused) {
+            audio.play();
+            botao.innerHTML = "⏸️ pausar música";
+        } else {
+            audio.pause();
+            botao.innerHTML = "🔊 escutar música";
+        }
+    }
+    </script>
+
 </body>
 </html>
