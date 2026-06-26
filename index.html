@@ -12,7 +12,7 @@
         
         <!-- Sua Foto Principal -->
         <div class="media-box">
-            <img src="sua-foto.jpg" alt="William Alencar" class="main-photo">
+            <img src="fotohome_720.png" alt="William Alencar" class="main-photo">
         </div>
         <br>
         <br>
@@ -22,12 +22,13 @@
             <a href="https://youtube.com/@wliam" target="_blank">🪰 yt</a>
             <a href="mailto:williamalencar@gmail.com">🏓 email</a>
         </div>
-
+        <br>
+        <br>
         <!-- PLAYER ARTESANAL: Texto puro para controlar o áudio -->
         <div class="player-artesanal">
             <!-- Substitua 'nome-do-seu-arquivo.mp3' pelo nome exato do arquivo que você subiu no GitHub -->
             <audio id="musica-bg" src="quintoandar_aumpassodoparaiso.mp3" loop></audio>
-            <span id="botao-player" onclick="controlarAudio()">🔊 ouvindo hoje</span>
+            <span id="botao-player" onclick="controlarAudio()"><b>▶️ ouvindo agora</b></span>
         </div>
 
     </div>
@@ -43,7 +44,7 @@
             botao.innerHTML = "⏸️ pausar música";
         } else {
             audio.pause();
-            botao.innerHTML = "🔊 escutar música";
+            botao.innerHTML = "▶️ escutar música";
         }
     }
     </script>
