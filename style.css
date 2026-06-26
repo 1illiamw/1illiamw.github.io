@@ -47,12 +47,38 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 25px; /* Espaço abaixo da foto */
 }
 
 .main-photo {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* Container do Player de Música (Entre a foto e os links) */
+.now-playing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Espaço entre o player e os links abaixo */
+    text-align: center;
+}
+
+.now-playing-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    text-transform: lowercase; /* Estilo minúsculo Strobeck */
+    letter-spacing: 0.5px;
+    margin-bottom: 8px; /* Espaço entre o texto com emoji e a barra do player */
+    opacity: 0.9;
+}
+
+.music-player {
+    display: flex;
+    justify-content: center;
+    opacity: 0.8; /* Deixa o player ligeiramente discreto no cenário */
 }
 
 /* Campo abaixo para adicionar os links (Puro Minimalismo) */
@@ -78,6 +104,6 @@ body {
 /* Comportamento ao passar o mouse (Hover) e clicar (Active) */
 .links-box a:hover, .links-box a:active {
     text-decoration: none;
-    color: #000000;            /* Mantém a cor estritamente preta */
-    opacity: 0.6;              /* Suaviza o texto sutilmente para indicar o clique */
+    color: #000000;            
+    opacity: 0.6;              /* Suaviza o texto sutilmente no clique */
 }
