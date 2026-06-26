@@ -20,7 +20,7 @@
                 <!-- PLAYER ARTESANAL: Texto puro para controlar o áudio -->
         <div class="player-artesanal">
             <!-- Substitua 'nome-do-seu-arquivo.mp3' pelo nome exato do arquivo que você subiu no GitHub -->
-            <audio id="musica-bg" src="quintoandar_aumpassodoparaiso.mp3" loop></audio>
+            <audio id="musica-bg" src="quintoandar_aumpassodoparaiso.mp3" onended="resetarPlayer()"></audio>
             <span id="botao-player" onclick="controlarAudio()">📡 listening now</span>
         </div>
         <div class="links-box">
@@ -43,6 +43,10 @@
             audio.pause();
             botao.innerHTML = "📡 listening now";
         }
+    }
+// Função automática que roda assim que o arquivo .mp3 termina de tocar
+    function resetarPlayer() {
+        botao.innerHTML = "📡 listening now";
     }
     </script>
 
