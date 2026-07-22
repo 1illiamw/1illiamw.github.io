@@ -16,10 +16,10 @@
             <img src="fotohome_720.png" alt="William Alencar" class="main-photo">
         </div>
         <br>
-<!-- PLAYER ARTESANAL -->
+<!-- PLAYER ARTESANAL RANDOMIZADO -->
         <div class="player-artesanal">
-            <!-- Forçamos o loop para false no código e chamamos o reset no onended -->
-            <audio id="musica-bg" src="Del the Funky Homosapien - Corner Story.mp3" onended="resetarPlayer()"></audio>
+            <!-- O 'src' começa vazio porque o JavaScript vai preencher com a música sorteada -->
+            <audio id="musica-bg" src="" onended="resetarPlayer()"></audio>
             <span id="botao-player" onclick="controlarAudio()">📡 listening now</span>
         </div>
 <!-- Seus Links -->
@@ -30,8 +30,30 @@
         </div>
     </div>
 
-    <!-- Script para alternar o Play/Pause e o texto do botão -->
-    <script>
+ <script>
+    // 1. LISTA DE MÚSICAS: Substitua pelos nomes exatos dos arquivos que você subirá no GitHub
+    var playlist = [
+        "Del the Funky Homosapien - Corner Story.mp3",
+        "pupillo - entree.mp3",
+        "Jorge Ben Jor - Caramba.mp3",
+        "O Futuro Me Absolve.mp3",
+        "Red Hot Chili Peppers - Hey.mp3",
+        "Sepultura x Sabotage - Black Steel In The Hour Of Chaos.mp3",
+        "Criolo - Nas Águas Espiral de Ilusão - Faixa 4.mp3",
+        "Nação Zumbi - Quando a Maré Encher.mp3",
+        "Gal Costa - Atimo de Som.mp3",
+        "Odetta - Hit Or Miss.mp3",
+        "Jovelina Pérola Negra - Sorriso Aberto.mp3",
+        "Novos Baianos - Linguagem do alunte.mp3"
+    ];
+
+    // 2. SORTEIO: Escolhe uma música aleatória assim que a página carrega
+    var musicaSorteada = playlist[Math.floor(Math.random() * playlist.length)];
+    
+    // Injeta a música escolhida na tag de áudio
+    document.getElementById("musica-bg").src = musicaSorteada;
+
+    // 3. CONTROLES DO PLAYER
     function controlarAudio() {
         var audio = document.getElementById("musica-bg");
         var botao = document.getElementById("botao-player");
