@@ -7,7 +7,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     color: #000000;
-    font-size: 14px;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,10 +127,10 @@ body {
 .bio-box {
     max-width: 600px;
     width: 100%;
-    text-align: justify;       /* Alinhamento justificado (margens retas) */
-    color: #000000;
-    font-size: 14px;
-    line-height: 1.25;         /* Espaçamento entre linhas de 1.25 */
+    text-align: justify;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.50;
     letter-spacing: 0.3px;
 }
 
