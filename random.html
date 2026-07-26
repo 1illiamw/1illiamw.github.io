@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Alencar</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+        
+        <!-- Logo Clicável para a Página Inicial -->
+        <a href="index.html" class="logo-link">
+            <!-- Substitua 'logo.png' pelo nome exato do seu arquivo -->
+            <img src="logo.png" alt="wli.am" class="site-logo">
+        </a>
+
+        <!-- Container do Vídeo Embedado -->
+        <div class="video-container">
+            <iframe id="video-player" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Legenda com Função, Empresa e Ano -->
+        <div class="video-info">
+            <p id="video-legenda"></p>
+        </div>
+
+        <!-- Links de Navegação (Posicionados Abaixo da Legenda) -->
+        <div class="links-box" style="margin-top: 25px;">
+            <a href="trabalhos.html">← bio</a>
+            <a href="javascript:void(0)" onclick="sortearNovoVideo()">🎲 outro trabalho</a>
+        </div>
+
+    </div>
+
+    <script>
+    // LISTA DE TRABALHOS COM VÍDEO E LEGENDA
+    var listaTrabalhos = [
+        {
+            url: "https://player.vimeo.com/video/1169296554",
+            legenda: "Dráuzio Pistola - Editor - Júpiter Conteúdo em Movimento (2026)"
+        },
+        {
+            url: "https://www.youtube.com/embed/WEcErdCit14",
+            legenda: "Maratona - Editor - Júpiter Conteúdo em Movimento (2025)"
+        },
+        {
+            url: "https://player.vimeo.com/video/541469382",
+            legenda: "Cartoon Bandido - Filmmaker, Editor (2017)"
+        }
+    ];
+
+    function sortearNovoVideo() {
+        // Sorteia um item completo da lista (vídeo + legenda)
+        var trabalhoSorteado = listaTrabalhos[Math.floor(Math.random() * listaTrabalhos.length)];
+        
+        // Atualiza o player de vídeo
+        document.getElementById("video-player").src = trabalhoSorteado.url;
+        
+        // Atualiza a legenda abaixo do vídeo
+        document.getElementById("video-legenda").innerHTML = trabalhoSorteado.legenda;
+    }
+
+    // Executa o sorteio automaticamente ao carregar a página
+    sortearNovoVideo();
+    </script>
+
+</body>
+</html>
