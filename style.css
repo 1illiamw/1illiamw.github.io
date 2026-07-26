@@ -40,7 +40,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 60px; /* Adiciona uma margem generosa no final de todas as páginas */
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 /* Box para incorporar a foto principal */
