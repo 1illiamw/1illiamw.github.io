@@ -103,14 +103,32 @@ body {
     opacity: 0.6;              /* Mesma resposta visual elegante dos links */
 }
 
+/* Estilo do Logo do Site */
+.logo-link {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.logo-link:hover {
+    opacity: 0.6; /* Mesma resposta sutil de hover dos links */
+}
+
+.site-logo {
+    max-width: 150px; /* Ajuste a largura do seu logo conforme necessário */
+    height: auto;
+    display: block;
+}
+
 /* Bio / Resumo Profissional */
 .bio-box {
     max-width: 600px;
     width: 100%;
-    text-align: left;
+    text-align: justify;       /* Alinhamento justificado (margens retas) */
     color: #000000;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.25;         /* Espaçamento entre linhas de 1.25 */
     letter-spacing: 0.3px;
 }
 
