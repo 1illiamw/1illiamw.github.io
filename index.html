@@ -51,7 +51,7 @@
     // Carrega a primeira faixa assim que a página abre
     carregarMusicaAleatoria();
 
-    // 2. CONTROLES DE PLAY / PAUSE MANUAL
+    // 2. CONTROLES DO PLAYER
     function controlarAudio() {
         var audio = document.getElementById("musica-bg");
         var botao = document.getElementById("botao-player");
@@ -65,19 +65,15 @@
         }
     }
 
-    // 3. TRANSIÇÃO AUTOMÁTICA PARA A PRÓXIMA MÚSICA
+    // 3. RESET AUTOMÁTICO COM NOVO SORTEIO
     function resetarPlayer() {
-        var audio = document.getElementById("musica-bg");
         var botao = document.getElementById("botao-player");
         
-        // Sorteia e carrega a nova faixa
+        // Sorteia a próxima faixa para ficar pronta
         carregarMusicaAleatoria();
         
-        // Toca a nova faixa automaticamente
-        audio.play();
-        
-        // Mantém o estado do botão em "pausar"
-        botao.innerHTML = "⏸️ pause";
+        // Volta o botão para o estado original
+        botao.innerHTML = "📡 listening now";
     }
     </script>
 
