@@ -42,13 +42,16 @@
         "Red Hot Chili Peppers - Hey.mp3",
     ];
 
-    // 2. SORTEIO: Escolhe uma música aleatória assim que a página carrega
-    var musicaSorteada = playlist[Math.floor(Math.random() * playlist.length)];
-    
-    // Injeta a música escolhida na tag de áudio
-    document.getElementById("musica-bg").src = musicaSorteada;
+// Função para sortear e carregar uma nova música
+    function carregarMusicaAleatoria() {
+        var musicaSorteada = playlist[Math.floor(Math.random() * playlist.length)];
+        document.getElementById("musica-bg").src = musicaSorteada;
+    }
 
-    // 3. CONTROLES DO PLAYER
+    // Carrega a primeira faixa assim que a página abre
+    carregarMusicaAleatoria();
+
+    // 2. CONTROLES DE PLAY / PAUSE MANUAL
     function controlarAudio() {
         var audio = document.getElementById("musica-bg");
         var botao = document.getElementById("botao-player");
@@ -62,9 +65,19 @@
         }
     }
 
+    // 3. TRANSIÇÃO AUTOMÁTICA PARA A PRÓXIMA MÚSICA
     function resetarPlayer() {
+        var audio = document.getElementById("musica-bg");
         var botao = document.getElementById("botao-player");
-        botao.innerHTML = "📡 listening now";
+        
+        // Sorteia e carrega a nova faixa
+        carregarMusicaAleatoria();
+        
+        // Toca a nova faixa automaticamente
+        audio.play();
+        
+        // Mantém o estado do botão em "pausar"
+        botao.innerHTML = "⏸️ pause";
     }
     </script>
 
