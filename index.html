@@ -13,8 +13,15 @@
         
         <!-- Sua Foto Principal -->
         <div class="media-box">
-            <img src="fotohome_720.png" alt="William Alencar" class="main-photo">
-        </div>
+    <img id="carrossel-foto" src="fotohome_720.png" alt="William Alencar" class="main-photo" onclick="proximaFoto()">
+    
+    <!-- Controles discretos em texto (opcional, pode manter só o clique na foto) -->
+    <div class="carrossel-nav">
+        <span onclick="fotoAnterior()">←</span>
+        <span id="indicador-foto">1/3</span>
+        <span onclick="proximaFoto()">→</span>
+    </div>
+            </div>
         <br>
 <!-- PLAYER ARTESANAL RANDOMIZADO -->
         <div class="player-artesanal">
@@ -76,6 +83,33 @@
         botao.innerHTML = "📡 listening now";
     }
     </script>
+// Lista de fotos na raiz do repositório
+var fotos = [
+    "fotohome_720.png",
+    "fotohome_2_720.png",
+    "fotohome_3_720.png"
+];
 
+var indiceAtual = 0;
+
+function atualizarCarrossel() {
+    var img = document.getElementById("carrossel-foto");
+    var indicador = document.getElementById("indicador-foto");
+    
+    img.src = fotos[indiceAtual];
+    if (indicador) {
+        indicador.innerText = (indiceAtual + 1) + "/" + fotos.length;
+    }
+}
+
+function proximaFoto() {
+    indiceAtual = (indiceAtual + 1) % fotos.length;
+    atualizarCarrossel();
+}
+
+function fotoAnterior() {
+    indiceAtual = (indiceAtual - 1 + fotos.length) % fotos.length;
+    atualizarCarrossel();
+}
 </body>
 </html>
