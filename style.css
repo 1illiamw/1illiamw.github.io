@@ -46,32 +46,17 @@ body {
 
 /* Box para incorporar a foto principal */
 .media-box {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-#carrossel-foto {
-    cursor: pointer;
-    user-select: none;
+.main-photo {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.carrossel-nav {
-    margin-top: 10px;
-    display: flex;
-    gap: 15px;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-}
-
-.carrossel-nav span {
-    cursor: pointer;
-    user-select: none;
-}
-
-.carrossel-nav span:hover {
-    opacity: 0.6;
-}
 /* Campo abaixo para adicionar os links (Puro Minimalismo) */
 .links-box {
     display: flex;
