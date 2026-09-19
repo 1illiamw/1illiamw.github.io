@@ -20,7 +20,7 @@
         <div class="player-artesanal">
             <!-- O 'src' começa vazio porque o JavaScript vai preencher com a música sorteada -->
             <audio id="musica-bg" src="" onended="resetarPlayer()"></audio>
-            <span id="botao-player" onclick="controlarAudio()">📡 listening now</span>
+            <span id="botao-player" onclick="controlarAudio()">📡 ouvindo</span>
         </div>
 <!-- Seus Links -->
         <div class="links-box">
@@ -61,7 +61,7 @@
             botao.innerHTML = "⏸️ pause";
         } else {
             audio.pause();
-            botao.innerHTML = "📡 listening now";
+            botao.innerHTML = "📡 ouvindo";
         }
     }
 
@@ -73,7 +73,7 @@
         carregarMusicaAleatoria();
         
         // Volta o botão para o estado original
-        botao.innerHTML = "📡 listening now";
+        botao.innerHTML = "📡 ouvindo";
     }
     </script>
 
